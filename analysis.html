@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Analysis | GoLaunch</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<a href="index.html" class="logo">
+<i class="fas fa-rocket"></i> GoLaunch
+</a>
+
+<p class="nav-label">Navigation</p>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fas fa-chart-line"></i> Dashboard
+</a>
+</li>
+
+<li>
+<a href="submit.html">
+<i class="fas fa-lightbulb"></i> Submit Idea
+</a>
+</li>
+
+<li class="active">
+<a href="analysis.html">
+<i class="fas fa-brain"></i> Analysis
+</a>
+</li>
+
+<li>
+<a href="pitch-decks.html">
+<i class="fas fa-file-powerpoint"></i> Pitch Decks
+</a>
+</li>
+
+<li>
+<a href="team.html">
+<i class="fas fa-users"></i> Team
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fas fa-cog"></i> Settings
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+<header>
+
+<h1>
+<i class="fas fa-brain icon-green"></i> AI Analysis Results
+</h1>
+
+<p class="subtitle">
+AI-powered feasibility report for your product idea
+</p>
+
+</header>
+
+
+<!-- VIABILITY SCORE -->
+
+<div class="card viability-section">
+
+<div class="viability-header">
+
+<div>
+
+<h3>
+<i class="fas fa-rocket"></i> Launch Viability Score
+</h3>
+
+<span class="pill-badge">
+Improve Before Launch
+</span>
+
+</div>
+
+<a href="pitch-decks.html" class="pitch-btn">
+<i class="fas fa-file-powerpoint"></i>
+Generate Pitch Deck
+</a>
+
+</div>
+
+
+<div class="viability-content">
+
+<!-- SCORE CIRCLE -->
+
+<div class="progress-circle">
+
+<svg width="160" height="160">
+
+<circle
+cx="80"
+cy="80"
+r="70"
+stroke="#e5e7eb"
+stroke-width="12"
+fill="none"
+/>
+
+<circle
+cx="80"
+cy="80"
+r="70"
+stroke="#2dd4bf"
+stroke-width="12"
+fill="none"
+stroke-dasharray="440"
+stroke-dashoffset="114"
+/>
+
+</svg>
+
+<div class="circle-score">74%</div>
+
+</div>
+
+
+<!-- TEXT -->
+
+<div class="viability-text">
+
+<p>
+
+Your product shows strong <b>market demand (82/100)</b> and good technical feasibility.
+
+However, <b>team readiness (65/100)</b> and moderate competition levels suggest strengthening your team before launch.
+
+Consider starting with a niche market rollout and validating your product with early adopters.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- METRICS -->
+
+<section class="stat-cards">
+
+<div class="card">
+<div class="card-header">
+<span>Market Demand</span>
+<i class="fas fa-chart-line icon-green"></i>
+</div>
+<div class="value">82<span>/100</span></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span>Competition Level</span>
+<i class="fas fa-chess icon-orange"></i>
+</div>
+<div class="value">55<span>/100</span></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span>Team Readiness</span>
+<i class="fas fa-users icon-blue"></i>
+</div>
+<div class="value">65<span>/100</span></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span>Technical Feasibility</span>
+<i class="fas fa-microchip icon-green"></i>
+</div>
+<div class="value">78<span>/100</span></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span>Revenue Potential</span>
+<i class="fas fa-coins icon-orange"></i>
+</div>
+<div class="value">71<span>/100</span></div>
+</div>
+
+</section>
+
+
+<!-- CHARTS -->
+
+<div class="charts-row">
+
+<div class="card">
+
+<h3>📊 Viability Radar</h3>
+
+<canvas id="radarChart"></canvas>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏆 Competitor Comparison</h3>
+
+<canvas id="barChart"></canvas>
+
+</div>
+
+</div>
+
+
+<!-- AI RECOMMENDATION -->
+
+<div class="ai-box">
+
+<div class="ai-icon">
+<i class="fas fa-robot"></i>
+</div>
+
+<div class="ai-text">
+
+<strong>AI Recommendation</strong>
+
+<p>
+Focus on building a stronger team and start with a niche market rollout.
+Validate product-market fit before scaling operations.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RISK TABLE -->
+
+<div class="card" style="margin-top:30px">
+
+<h3>⚠ Risk Assessment</h3>
+
+<table>
+
+<tr>
+<th>Risk</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+
+<tr>
+<td>Market Risk</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Focus on early adopters before scaling.</td>
+</tr>
+
+<tr>
+<td>Technical Risk</td>
+<td>Medium</td>
+<td>High</td>
+<td>Adopt modular architecture.</td>
+</tr>
+
+<tr>
+<td>Financial Risk</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Maintain 6-month runway.</td>
+</tr>
+
+<tr>
+<td>Operational Risk</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Automate testing and CI/CD.</td>
+</tr>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+
+
+<script>
+
+/* RADAR CHART */
+
+new Chart(document.getElementById("radarChart"),{
+
+type:"radar",
+
+data:{
+labels:["Market Fit","Competition","Team","Tech","Finance","Timing"],
+datasets:[{
+data:[82,55,65,78,71,74],
+backgroundColor:"rgba(45,212,191,0.2)",
+borderColor:"#2dd4bf",
+borderWidth:2
+}]
+},
+
+options:{
+plugins:{legend:{display:false}},
+scales:{r:{suggestedMin:0,suggestedMax:100}}
+}
+
+});
+
+
+/* BAR CHART */
+
+new Chart(document.getElementById("barChart"),{
+
+type:"bar",
+
+data:{
+labels:["CompetitorX","RivalY","AltZ","Your Product"],
+datasets:[{
+data:[70,60,65,74],
+backgroundColor:["#94a3b8","#94a3b8","#94a3b8","#2dd4bf"]
+}]
+},
+
+options:{
+plugins:{legend:{display:false}},
+scales:{y:{beginAtZero:true,max:100}}
+}
+
+});
+
+</script>
+
+</body>
+</html>
